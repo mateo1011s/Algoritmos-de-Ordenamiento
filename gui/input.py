@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 import random 
-from algoritmos.data_manager import DataManager 
+from Algoritmos.data_manager import DataManager 
 
 class InputOptionsScreen(tk.Toplevel):
     def __init__(self, master=None, data_manager=None, next_callback=None):
@@ -108,7 +108,7 @@ class InputOptionsScreen(tk.Toplevel):
             self._advance_to_sorters()
             
         except ValueError as e:
-            messagebox.showerror("Error de Cantidad", str(e))
+            messagebox.showerror("Error de Cantidad", "La cantidad debe ser un número")
 
     def _advance_to_sorters(self):
 
@@ -121,3 +121,4 @@ class InputOptionsScreen(tk.Toplevel):
         if self.master:
             self.master.destroy()
         self.destroy()
+

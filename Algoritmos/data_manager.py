@@ -8,6 +8,8 @@ class DataManager:
     @property
     def base_data(self):
         return self._base_data
+    def get_data_copy(self):
+        return self._base_data.copy()
 
     def set_data_manual(self, input_string: str):
 
@@ -28,6 +30,7 @@ class DataManager:
             raise ValueError("La cantidad de datos debe ser mayor a cero.")
             
         self._base_data = [random.randint(1, 1000) for _ in range(count)]
+
 
 
 # --- Ejemplo de Uso del DataManager (Opcional, para pruebas unitarias) ---

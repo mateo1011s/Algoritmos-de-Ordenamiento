@@ -3,7 +3,8 @@
 import tkinter as tk
 from gui.welcome import WelcomeScreen
 from gui.input import InputOptionsScreen 
-from algoritmos.data_manager import DataManager 
+from gui.algorithms import AlgoritmsInputScreen
+from Algoritmos.data_manager import DataManager 
 
 class AppController:
     def __init__(self, master):
@@ -20,8 +21,9 @@ class AppController:
         
     def show_sorters_screen(self):
         """Aqui deben poner el menú de selección de algoritmos."""
-        self.master.deiconify() 
-        self.master.destroy() 
+        
+        AlgoritmsInputScreen(self.master,data_manager=self.dm, next_callback=self.show_sorters_screen)
+        
         
 if __name__ == "__main__":
     root = tk.Tk()
