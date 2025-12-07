@@ -40,7 +40,7 @@ class WelcomeScreen(tk.Toplevel):
                             bg="black", 
                             fg="white", 
                             font=("Helvetica", 24, "bold"))
-        title_label.grid(row=0, column=0, pady=(100, 10), sticky="nsew")
+        title_label.grid(row=0, column=0, pady=(100, 10), sticky="s")
 
         group_label = tk.Label(self, 
                             text="Grupo 6", 
